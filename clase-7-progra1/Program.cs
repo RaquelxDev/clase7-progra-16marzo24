@@ -29,6 +29,9 @@ static void ejemplo2()
 }
 //ejemplo2();
 
+
+
+//Ejemplo 3
 static void promedio()
 {
     int[] notas = { 80, 75, 90, 95, 73, 79 };
@@ -43,45 +46,69 @@ static void promedio()
         
     }
     promedio = promedio / 6;
-    Console.WriteLine($"El promedio es: "{ promedio});
+    Console.WriteLine($"El promedio es: {promedio}");
 
     Console.WriteLine("Original");
     foreach (int nota in notas)
     {
         Console.WriteLine(nota);
     }
-
-
-
 }
+
 //promedio();
 
-/*
-static void promedio_for()
+
+//Ejemplo 4
+
+static void ejemplo4()
 {
-    int[] calificaciones = {85, 92, 77 68, 94 };
+    int[] notas = { 80, 75, 90, 95, 73, 79 };
+    double promedios = 0;
 
-    for (int i = 0; i < calificaciones.Length i++)
-
+    for (int i = 0; i < notas.Length; i++)
     {
-        Console.WriteLine($"calificaciones{i + 1}: { calificaciones[i]}");
+        promedios += notas[i];
     }
+    double prom = promedios / notas.Length;
+    Console.WriteLine(prom);
 
+    Array.Sort(notas);
 }
-*/
+//ejemplo4();
+
+
+//Ejemplo 5
 static void calificaciones()
 {
-    int[] calificaciones = { 85, 92, 77, 68, 94 };
-    bool hayAprobados = Array.Exists(calificaciones, calif => calif >= 60);
-
+    int[] notas = { 80, 75, 90, 95, 73, 79 };
+    bool aprobado = Array.Exists(notas, calif => calif >= 60);
+    if (aprobado == true)
+    {
+        Console.WriteLine("aprobado");
+    }
+    else
+    {
+        Console.WriteLine("no aprobado");
+    }
 }
 //calificaciones();
 
-static void ejercicio1()
-{
-    string[] num1 = {"juan", "ana", "pedro", "monica", "andrea" };
-    for (int i = num1.Length - 1; i >= 0; i--)
-        Console.WriteLine(num1[i]);
-}
-ejercicio1();
 
+//Ejemplo 6
+
+static void ejercicio6()
+{
+    string[] name = { "Juan", "Ana", "Pedro", "Maria", "Andrea" };
+    string[] name2 = new string[name.Length];
+
+    for (int i = 0; i < name.Length; i++)
+    {
+        name2[i] = name[name.Length - 1 - i];
+    }
+
+    for (int i = 0; i < name2.Length; i++)
+    {
+        Console.WriteLine(name2[i]);
+    }
+}
+//ejercicio6();
